@@ -65,3 +65,26 @@ def character_win_status(hp, monster_hp, gold):
         else:
             print("Thank you for playing!")
             return gold, "end"
+
+
+def main_game():
+    name, hp, attack, gold = character_create()
+
+    game_over = False
+
+    while not game_over:
+
+        character_status(name, hp, attack, gold)
+
+        hp, monster_hp = character_fight(hp, attack)
+
+        gold, result = character_win_status(hp, monster_hp, gold)
+
+        if result == "restart":
+            name, hp, attack, gold = character_create()
+
+        elif result == "end":
+            game_over = True
+
+
+main_game()
