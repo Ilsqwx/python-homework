@@ -1,0 +1,241 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+
+/* ограничение ширины сайта */
+body{
+max-width:1400px;
+margin:auto;
+}
+
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 80px;
+background:#f3f3f3;
+}
+
+.logo-container{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo{
+color:#4b8c9b;
+}
+
+.buttons button{
+background:none;
+border:none;
+margin-left:20px;
+cursor:pointer;
+font-size:16px;
+}
+
+
+.first{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:80px;
+padding:100px;
+background:linear-gradient(#cfe3ea,#7fa6b3);
+}
+
+.content{
+max-width:500px;
+}
+
+.content h1{
+font-size:40px;
+margin-bottom:20px;
+}
+
+.content p{
+margin-bottom:20px;
+line-height:1.5;
+}
+
+.content button{
+background:#2b5f6b;
+color:white;
+border:none;
+padding:12px 25px;
+cursor:pointer;
+}
+
+.seafood-image{
+width:420px;
+display:block;
+margin-top:20px;
+}
+
+
+/* second */
+
+.second{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:40px;
+padding:80px;
+background:#eee;
+text-align:center;
+}
+
+.second img{
+width:280px;
+}
+
+
+.images-group img{
+width:90px;
+margin:5px;
+}
+
+
+/* third */
+
+.third{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:60px;
+padding:100px;
+background:#f5f5f5;
+}
+
+.third img{
+width:420px;
+}
+
+.text-container{
+max-width:400px;
+}
+
+.text-container button{
+margin-top:20px;
+padding:10px 25px;
+background:#2b5f6b;
+color:white;
+border:none;
+}
+
+
+/* fourth */
+
+.fourth{
+background:#1e5960;
+color:white;
+text-align:center;
+padding:100px 40px;
+}
+
+.image-text-container{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:40px;
+margin-top:40px;
+}
+
+.image-text-container img{
+width:300px;
+border-radius:6px;
+}
+
+
+/* fifth */
+
+.fifth{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:60px;
+padding:100px;
+background:#f3f3f3;
+}
+
+.fifth img{
+width:420px;
+}
+
+
+/* stats */
+
+.stats{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:80px;
+padding:80px;
+background:#1e5960;
+color:white;
+text-align:center;
+}
+
+.stats img{
+width:60px;
+margin-bottom:10px;
+}
+
+
+/* restaurant */
+
+.restaurant{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:60px;
+padding:100px;
+background:#f5f5f5;
+}
+
+.restaurant img{
+width:420px;
+}
+
+/* круги еды */
+
+.restaurant div div{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.restaurant div div img{
+width:80px;
+height:80px;
+border-radius:50%;
+object-fit:cover;
+}
+
+
+/* contacts */
+
+.contacts{
+text-align:center;
+padding:100px;
+background:#f3f3f3;
+}
+
+.contacts > div{
+display:flex;
+justify-content:center;
+gap:80px;
+margin-top:50px;
+flex-wrap:wrap;
+}
+
+.contacts img{
+width:40px;
+margin-bottom:10px;
+}
