@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Library</h1>
+
+<form action="/add_book" method="POST">
+    <input type="text" name="title" placeholder="Title">
+    <input type="text" name="author" placeholder="Author">
+    <input type="text" name="description" placeholder="Description">
+    <input type="number" name="year" placeholder="Year">
+    <input type="text" name="image_url" placeholder="Image URL">
+    <button type="submit">Add Book</button>
+</form>
+
+<div class="cards">
+    {% for book in books %}
+    <div class="card">
+        <img src="{{ book[5] }}" alt="book">
+
+        <h3>{{ book[1] }}</h3>
+        <p>{{ book[2] }} ({{ book[4] }})</p>
+
+        <a href="/book/{{ book[0] }}">Details</a><br>
+        <a href="/delete_book/{{ book[0] }}">Delete</a>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

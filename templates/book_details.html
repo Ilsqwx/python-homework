@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{ book[1] }}</h1>
+
+<p><b>Author:</b> {{ book[2] }}</p>
+<p><b>Description:</b> {{ book[3] }}</p>
+<p><b>Year:</b> {{ book[4] }}</p>
+
+<img src="{{ book[5] }}" width="200">
+
+<a href="/library">Back</a>
+
+{% endblock %}
