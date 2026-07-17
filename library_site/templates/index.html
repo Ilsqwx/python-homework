@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+<h2>Home Page</h2>
+
+<p>Welcome to the library website.</p>
+
+<img src="{% static 'images/library.jpg' %}" alt="Library" width="400">
+{% endblock %}
