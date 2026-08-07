@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Пошук роботи</title>
+    <link rel="stylesheet" href="{% static 'jobs/style.css' %}">
+</head>
+<body>
+
+<h1>Сайт пошуку роботи</h1>
+
+{% for job in jobs %}
+<div class="card">
+    <h2>{{ job.title }}</h2>
+    <p><b>Компанія:</b> {{ job.company }}</p>
+    <p><b>Зарплата:</b> {{ job.salary }}</p>
+
+    <a class="btn" href="/job/{{ job.id }}/">Детальніше</a>
+</div>
+{% endfor %}
+
+</body>
+</html>
