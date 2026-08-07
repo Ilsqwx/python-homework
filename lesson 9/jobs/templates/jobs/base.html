@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Сайт вакансій</title>
+    <link rel="stylesheet" href="{% static 'jobs/style.css' %}">
+</head>
+<body>
+
+<h1>Сайт вакансій</h1>
+
+<a href="/">Головна</a> |
+<a href="/vacancies/">Вакансії</a> |
+<a href="/articles/">Статті</a> |
+<a href="/add-article/">Додати статтю</a> |
+<a href="/about/">Про нас</a>
+
+<hr>
+
+{% block content %}
+{% endblock %}
+
+</body>
+</html>

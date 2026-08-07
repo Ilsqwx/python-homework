@@ -1,0 +1,23 @@
+{% extends "jobs/base.html" %}
+
+{% block content %}
+
+<h2>Статті</h2>
+
+{% for article in articles %}
+<div class="card">
+
+<h3>{{ article.title }}</h3>
+
+<p>{{ article.short_description }}</p>
+
+<p>{{ article.created_at }}</p>
+
+<a href="/articles/{{ article.id }}/">
+Читати
+</a>
+
+</div>
+{% endfor %}
+
+{% endblock %}

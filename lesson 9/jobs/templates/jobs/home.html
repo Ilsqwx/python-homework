@@ -1,0 +1,31 @@
+{% extends "jobs/base.html" %}
+
+{% block content %}
+
+<h2>Останні вакансії</h2>
+
+{% for vacancy in vacancies %}
+<div class="card">
+    <h3>{{ vacancy.title }}</h3>
+    <p>{{ vacancy.company }}</p>
+
+    <a href="/vacancy/{{ vacancy.id }}/">
+        Детальніше
+    </a>
+</div>
+{% endfor %}
+
+<h2>Останні статті</h2>
+
+{% for article in articles %}
+<div class="card">
+    <h3>{{ article.title }}</h3>
+    <p>{{ article.short_description }}</p>
+
+    <a href="/articles/{{ article.id }}/">
+        Читати
+    </a>
+</div>
+{% endfor %}
+
+{% endblock %}

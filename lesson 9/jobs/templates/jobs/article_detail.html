@@ -1,0 +1,13 @@
+{% extends "jobs/base.html" %}
+
+{% block content %}
+
+<h2>{{ article.title }}</h2>
+
+<p>{{ article.content }}</p>
+
+<p>{{ article.created_at }}</p>
+
+<a href="/articles/">Назад</a>
+
+{% endblock %}
