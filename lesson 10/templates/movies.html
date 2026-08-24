@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Фільми</h2>
+
+<a class="button" href="{% url 'movie_add' %}">+ Додати фільм</a>
+
+<div class="movies">
+
+    {% for movie in movies %}
+
+    <div class="card">
+
+        {% if movie.poster %}
+            <img src="{{ movie.poster.url }}" alt="{{ movie.title }}">
+        {% endif %}
+
+        <h3>{{ movie.title }}</h3>
+
+        <p>Режисер: {{ movie.director }}</p>
+        <p>Рік: {{ movie.year }}</p>
+        <p>Жанр: {{ movie.genre }}</p>
+
+        <a href="{% url 'movie_detail' movie.id %}">Детальніше</a>
+        <a href="{% url 'movie_edit' movie.id %}">Редагувати</a>
+        <a href="{% url 'movie_delete' movie.id %}">Видалити</a>
+
+    </div>
+
+    {% empty %}
+
+    <p>Фільмів поки немає.</p>
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}

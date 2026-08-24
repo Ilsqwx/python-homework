@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>{{ movie.title }}</h2>
+
+{% if movie.poster %}
+    <img class="detail-poster" src="{{ movie.poster.url }}" alt="{{ movie.title }}">
+{% endif %}
+
+<p><b>Режисер:</b> {{ movie.director }}</p>
+<p><b>Рік випуску:</b> {{ movie.year }}</p>
+<p><b>Жанр:</b> {{ movie.genre }}</p>
+
+<h3>Опис</h3>
+
+<p>{{ movie.description }}</p>
+
+<a class="button" href="{% url 'movies' %}">Назад до фільмів</a>
+
+{% endblock %}
