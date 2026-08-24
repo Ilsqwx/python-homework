@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Видалити вакансію</title>
+</head>
+<body>
+
+<h1>Видалити вакансію?</h1>
+
+<p>{{ vacancy.title }}</p>
+
+<form method="post">
+
+    {% csrf_token %}
+
+    <button type="submit">Так, видалити</button>
+
+</form>
+
+<a href="{% url 'vacancy_list' %}">Скасувати</a>
+
+</body>
+</html>
